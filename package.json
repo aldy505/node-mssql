@@ -3,8 +3,14 @@
     "name": "Patrik Simek",
     "url": "https://patriksimek.cz"
   },
-  "name": "mssql",
-  "description": "Microsoft SQL Server client for Node.js.",
+  "contributors": [
+    {
+      "name": "Reinaldy Rafli",
+      "url": "https://github.com/aldy505"
+    }
+  ],
+  "name": "@aldy505/mssql",
+  "description": "Microsoft SQL Server client for Node.js with built-in OpenTelemetry.",
   "keywords": [
     "database",
     "mssql",
@@ -21,12 +27,14 @@
     "azure",
     "node-mssql"
   ],
-  "version": "9.1.1",
+  "version": "10.0.2",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "type": "commonjs",
-  "repository": "github:tediousjs/node-mssql",
+  "repository": "github:aldy505/node-mssql",
   "license": "MIT",
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
     "@tediousjs/connection-string": "^0.5.0",
     "commander": "^11.0.0",
     "debug": "^4.3.3",
@@ -41,6 +49,7 @@
     "@semantic-release/github": "^9.0.3",
     "@semantic-release/npm": "^11.0.0",
     "@semantic-release/release-notes-generator": "^12.0.0",
+    "@types/node": "^20.14.2",
     "mocha": "^10.0.0",
     "semantic-release": "^22.0.0",
     "standard": "^17.0.0"
@@ -52,7 +61,9 @@
     "lib/",
     "bin/",
     "tedious.js",
-    "msnodesqlv8.js"
+    "msnodesqlv8.js",
+    "types/index.d.ts",
+    "types/msnodesqlv8.d.ts"
   ],
   "scripts": {
     "commitlint": "commitlint --from origin/master --to HEAD",
